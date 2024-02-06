@@ -1,0 +1,53 @@
+ body {
+            text-align: center;
+        }
+
+        .flip {
+            width: 240px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 20px;
+            perspective: 1000px;
+            display: inline-block;
+        }
+
+        .flip:hover .back {
+            transform: rotateY(0deg);
+        }
+
+        .flip:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            backface-visibility: hidden;
+            transition: transform 0.5s linear 0s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            transform: rotateY(0deg);
+            background-size: cover;
+            color: #fff;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px purple;
+            box-shadow: 2px 2px 4px #000000;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background-color: #ff5050; /* Background color for the heart */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            margin: 0;
+            color: #fff;
+        }
